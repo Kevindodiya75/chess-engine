@@ -1,0 +1,64 @@
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# If you use environment variables in a .env file
+*.env
+
+# Django migrations (if you want to ignore auto-generated migration files)
+# Uncomment the following line if you prefer not to track migrations
+#migrations/
+
+# Static files collected by Django
+staticfiles/
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+pytest_cache/
+
+# PyInstaller
+*.manifest
+*.spec

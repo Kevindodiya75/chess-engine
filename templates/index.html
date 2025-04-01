@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        pre {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .form-control {
+            padding: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chess Board</h1>
+    <pre>{{ board_str }}</pre>
+
+    <h2>Legal Moves</h2>
+    <ul>
+        {% for move in legal_moves %}
+        <li>{{ move }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Make a Move</h2>
+    <form method="post" action="{% url 'make_move' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Move</button>
+    </form>
+</body>
+
+</html>
